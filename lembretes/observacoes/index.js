@@ -19,8 +19,8 @@ app.put('/lembretes/:id/observacoes', async (req, res) => {
     tipo: "ObservacaoCriada",
     dados: {
       id: idObs, texto, lembreteId: req.params.id
-    }
-  })
+    },
+  });
   res.status(201).send(observacoesDoLembrete);
 });
 

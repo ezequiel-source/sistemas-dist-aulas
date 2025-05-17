@@ -7,8 +7,9 @@ lembretes = {};
 contador = 0;
 
 app.get('/lembretes', (req, res) => {
-  res.send(lembretes);
+  res.send(observacoesPorLembreteId[req.params.id] || []);
 });
+
 app.put('/lembretes', (req, res) => {
   contador++;
   const { texto } = req.body;
